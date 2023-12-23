@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include("../../partials/head/head-meta.html")
+    <title>Add Product Dashboard eCommerce HTML Template - FreshCart</title>
+    <link
+      href="@@webRoot/node_modules/dropzone/dist/min/dropzone.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="@@webRoot/assets/scss/theme/vendor/tagsinput/bootstrap-taginput.css"
+    />
+    @@include("../../partials/head/head-links.html")
+    @@include("../../partials/head/analytics-code.html")
+  </head>
+
+  <body>
+    <!-- main wrapper -->
+
+    @@include("../../partials/top-navbar.html")
+    <div class="main-wrapper">
+      <!-- navbar vertical -->
+      @@include('../../partials/navbar-vertical.html', { "page_group":
+      "products", "page": "add" })
+
+      <!-- main -->
+      <main class="main-content-wrapper">
+        <!-- container -->
+        <div class="container">
+          <!-- row -->
+          <div class="row mb-8">
+            <div class="col-md-12">
+              <div class="d-md-flex justify-content-between align-items-center">
+                <!-- page header -->
+                <div>
+                  <h2>Yeni Ürün Ekle</h2>
+                  <!-- breacrumb -->
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                      <li class="breadcrumb-item">
+                        <a
+                          href="@@webRoot/dashboard/index.html"
+                          class="text-inherit"
+                          >Panel</a
+                        >
+                      </li>
+                      <li class="breadcrumb-item">
+                        <a
+                          href="@@webRoot/dashboard/products/products.html"
+                          class="text-inherit"
+                          >Ürünler</a
+                        >
+                      </li>
+                      <li class="breadcrumb-item active" aria-current="page">
+                        Yeni Ürün Ekle
+                      </li>
+                    </ol>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- row -->
+          <div class="row">
+            <div class="col-md-8">
+              <div class="col-lg-12 col-12">
+                <!-- card -->
+                <div class="card mb-6 card-lg">
+                  <!-- card body -->
+                  <div class="card-body p-6">
+                    <h4 class="mb-4 h5">Ürün Bilgileri</h4>
+
+                    <div class="row">
+                      <!-- input -->
+                      <div class="mb-3 col-lg-6">
+                        <label class="form-label">Başlık</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Ürün Adı"
+                          required
+                        />
+                      </div>
+
+                      <!-- input -->
+                      <div class="mb-3 col-lg-6">
+                        <label class="form-label">Ürün Kategori</label>
+                        <select class="form-select">
+                          <option selected>Product Category</option>
+                          <option value="Dairy, Bread & Eggs">
+                            Dairy, Bread & Eggs
+                          </option>
+                          <option value="Snacks & Munchies">
+                            Snacks & Munchies
+                          </option>
+                          <option value="Fruits & Vegetables">
+                            Fruits & Vegetables
+                          </option>
+                        </select>
+                      </div>
+
+                      <!-- input -->
+                      <div>
+                        <div class="mb-3 col-lg-12 mt-5">
+                          <!-- heading -->
+                          <h4 class="mb-3 h5">Ürün Resimleri</h4>
+
+                          <!-- input -->
+                          <div
+                            id="my-dropzone"
+                            class="dropzone mt-4 border-dashed rounded-2 min-h-0"
+                          ></div>
+                        </div>
+                      </div>
+
+                      <!-- input -->
+                      <div class="mb-3 col-lg-12 mt-5">
+                        <h4 class="mb-3 h5">Ürün Açıklaması</h4>
+                        <div id="editor" style="min-height: 200px"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-12 col-12">
+                <!-- card -->
+                <div class="card mb-6 card-lg">
+                  <!-- card body -->
+                  <div class="card-body p-6">
+                    <h4 class="mb-4 h5">Ürün Seçenekleri</h4>
+
+                    <div class="row">
+                      <div class="col-md-12">
+                        <p>Seçenek 1</p>
+
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="Seçenek Adı">
+                        </div>
+
+                        <div class="u-tagsinput mt-5">
+                          <input type="text" data-role="tagsinput" placeholder="mavi; yellow; 6x24; 120cm vb." />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row mt-3 pt-3 border-top">
+                      <div class="col-md-12">
+                        <p>Seçenek 2</p>
+
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="Seçenek Adı">
+                        </div>
+
+                        <div class="u-tagsinput mt-5">
+                          <input type="text" data-role="tagsinput" placeholder="mavi; yellow; 6x24; 120cm vb." />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row mt-3 pt-3 border-top">
+                      <div class="col-md-12">
+                        <p>Seçenek 3</p>
+
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="Seçenek Adı">
+                        </div>
+
+                        <div class="u-tagsinput mt-5">
+                          <input type="text" data-role="tagsinput" placeholder="mavi; yellow; 6x24; 120cm vb." />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row mt-3 pt-3 border-top">
+                      <div class="col-md-12">
+                        <p>Seçenek 4</p>
+
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="Seçenek Adı">
+                        </div>
+
+                        <div class="u-tagsinput mt-5">
+                          <input type="text" data-role="tagsinput" placeholder="mavi; yellow; 6x24; 120cm vb." />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row mt-3 pt-3 border-top">
+                      <div class="col-md-12">
+                        <p>Seçenek 5</p>
+
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="Seçenek Adı">
+                        </div>
+
+                        <div class="u-tagsinput mt-5">
+                          <input type="text" data-role="tagsinput" placeholder="mavi; yellow; 6x24; 120cm vb." />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-12">
+              <!-- card -->
+              <div class="card mb-6 card-lg">
+                <!-- card body -->
+                <div class="card-body p-6">
+                  <!-- input -->
+                  <div class="form-check form-switch mb-4">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      role="switch"
+                      id="flexSwitchStock"
+                      checked
+                    />
+                    <label class="form-check-label" for="flexSwitchStock"
+                      >Stok'ta var</label
+                    >
+                  </div>
+
+                  <!-- input -->
+                  <div>
+                    <div class="mb-3">
+                      <label class="form-label">Ürün Kod</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Ürün Kod"
+                      />
+                    </div>
+
+                    <!-- input -->
+                    <div class="mb-3">
+                      <label class="form-label">Ürün Barkod</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Enter Product Title"
+                      />
+                    </div>
+
+                    <!-- input -->
+                    <div class="mb-3">
+                      <label class="form-label" id="productSKU">Durum</label>
+                      <br />
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="inlineRadioOptions"
+                          id="inlineRadio1"
+                          value="option1"
+                          checked
+                        />
+                        <label class="form-check-label" for="inlineRadio1"
+                          >Aktif</label
+                        >
+                      </div>
+                      <!-- input -->
+                      <div class="form-check form-check-inline">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="inlineRadioOptions"
+                          id="inlineRadio2"
+                          value="option2"
+                        />
+                        <label class="form-check-label" for="inlineRadio2"
+                          >Pasif</label
+                        >
+                      </div>
+                      <!-- input -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- card -->
+              <div class="card mb-6 card-lg">
+                <!-- card body -->
+                <div class="card-body p-6">
+                  <h4 class="mb-4 h5">Ürün Fiyat</h4>
+                  <!-- input -->
+                  <div class="mb-3">
+                    <label class="form-label">Alış Fiyat'ı</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="0.00 TL"
+                    />
+                  </div>
+
+                  <!-- input -->
+                  <div class="mb-3">
+                    <label class="form-label">Satış Fiyat'ı</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="0.00 TL"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- card -->
+              <div class="card mb-6 card-lg">
+                <!-- card body -->
+                <div class="card-body p-6">
+                  <h4 class="mb-4 h5">Meta Bilgileri</h4>
+                  <!-- input -->
+                  <div class="mb-3">
+                    <label class="form-label">Meta Başlık</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Başlık"
+                    />
+                  </div>
+
+                  <!-- input -->
+                  <div class="mb-3">
+                    <label class="form-label">Meta Açıklaması</label>
+                    <textarea
+                      class="form-control"
+                      rows="3"
+                      placeholder="Meta Açıklaması"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <!-- button -->
+              <div class="d-grid">
+                <a href="#" class="btn btn-primary">Ürün'ü Ekle</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    @@include("../../partials/scripts.html")
+    <script src="@@webRoot/node_modules/quill/dist/quill.min.js"></script>
+    <script src="@@webRoot/assets/js/vendors/editor.js"></script>
+    <script src="@@webRoot/node_modules/dropzone/dist/min/dropzone.min.js"></script>
+    <script src="@@webRoot/assets/js/vendors/dropzone.js"></script>
+    <script src="@@webRoot/assets/js/vendors/jquery.js"></script>
+    <script src="@@webRoot/assets/js/vendors/bootstrap-taginput.js"></script>
+  </body>
+</html>

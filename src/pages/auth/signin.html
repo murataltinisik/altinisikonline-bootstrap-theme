@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include("../../partials/head/head-meta.html")
+    <title>Sign in eCommerce HTML Template - FreshCart</title>
+    @@include("../../partials/head/head-links.html")
+    @@include("../../partials/head/analytics-code.html")
+  </head>
+
+  <body>
+    @@include("../../partials/navbar.html")
+
+    <main>
+      <!-- section -->
+      <section class="my-5 mb-10 pt-5 py-5">
+        <div class="container">
+          <!-- row -->
+          <div class="row justify-content-center align-items-center">
+            <div class="col-12 col-md-6 col-lg-4 order-lg-1 order-2">
+              <!-- img -->
+              <img
+                src="../../assets/images/svg-graphics/signin-g.svg"
+                alt=""
+                class="img-fluid"
+              />
+            </div>
+            <!-- col -->
+            <div
+              class="col-12 col-md-6 offset-lg-1 col-lg-4 order-lg-2 order-1"
+            >
+              <div class="mb-lg-9 mb-5">
+                <h1 class="mb-1 h2 fw-bold">Giriş Yap</h1>
+                <p>Altınışık Online, Hoşgeldiniz.</p>
+              </div>
+
+              <form class="needs-validation" novalidate>
+                <div class="row g-3">
+                  <!-- row -->
+                  <div class="col-12">
+                    <!-- input -->
+                    <label
+                      for="formSigninEmail"
+                      class="form-label visually-hidden"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="formSigninEmail"
+                      placeholder="Email Giriniz..."
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      E-Posta Adresinizi Girmelisiniz!
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <!-- input -->
+                    <div class="password-field position-relative">
+                      <label
+                        for="formSigninPassword"
+                        class="form-label visually-hidden"
+                        >Şifre</label
+                      >
+                      <div class="password-field position-relative">
+                        <input
+                          type="password"
+                          class="form-control fakePassword"
+                          id="formSigninPassword"
+                          placeholder="*****"
+                          required
+                        />
+                        <span
+                          ><i class="bi bi-eye-slash passwordToggler"></i
+                        ></span>
+                        <div class="invalid-feedback">Şifrenizi Giriniz!</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <!-- form check -->
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault"
+                      />
+                      <!-- label -->
+                      <label class="form-check-label" for="flexCheckDefault"
+                        >Beni Hatırla</label
+                      >
+                    </div>
+                    <div>
+                      Şifremi Unuttum?
+                      <a href="@@webRoot/pages/auth/forgot-password.html"
+                        >Yenile</a
+                      >
+                    </div>
+                  </div>
+                  <!-- btn -->
+                  <div class="col-12 d-grid">
+                    <button type="submit" class="btn btn-primary">
+                      Giriş Yap
+                    </button>
+                  </div>
+
+                  <!-- link -->
+                  <div>
+                    Hesabınız yok mu?
+                    <a href="@@webRoot/pages/auth/signup.html">Kayıt Ol</a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    @@include("../../partials/footer.html")
+    <!-- Javascript-->
+    @@include("../../partials/scripts.html")
+    <script src="@@webRoot/assets/js/vendors/password.js"></script>
+    <script src="@@webRoot/assets/js/vendors/validation.js"></script>
+  </body>
+</html>

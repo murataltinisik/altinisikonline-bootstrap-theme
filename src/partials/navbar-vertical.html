@@ -1,0 +1,1185 @@
+<!-- NAVBAR -->
+<nav class="navbar-vertical-nav d-none d-xl-block">
+  <div class="navbar-vertical">
+    <div class="px-4 py-5">
+      <a href="@@webRoot/dashboard/index.html" class="navbar-brand">
+        <img
+          src="@@webRoot/assets/images/logo/logo.png"
+          style="width: 200px"
+          alt=""
+        />
+      </a>
+    </div>
+
+    <div class="navbar-vertical-content flex-grow-1" data-simplebar="">
+      <ul class="navbar-nav flex-column" id="sideNavbar">
+        <li class="nav-item">
+          <a
+            class="nav-link @@if (context.page === 'dashboard') { active }"
+            href="@@webRoot/dashboard/index.html"
+          >
+            <div class="d-flex align-items-center">
+              <span class="nav-link-icon"><i class="bi bi-house"></i></span>
+              <span class="nav-link-text">Panel</span>
+            </div>
+          </a>
+        </li>
+
+        <li class="nav-item mt-6 mb-3">
+          <span class="nav-label">Mağaza Yönetimi</span>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link @@if (context.page_group === 'products') { collapsed }"
+            href="#"
+            data-bs-toggle="collapse"
+            data-bs-target="#navProducts"
+            aria-expanded="false"
+            aria-controls="navProducts"
+          >
+            <div class="d-flex align-items-center">
+              <span class="nav-link-icon"><i class="bi bi-list-ul"></i></span>
+              <span class="nav-link-text">Ürünler</span>
+            </div>
+          </a>
+
+          <div
+            id="navProducts"
+            class="collapse @@if (context.page_group === 'products') { show }"
+            data-bs-parent="#sideNavbar"
+          >
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'list') { active }"
+                  href="@@webRoot/dashboard/products/products.html"
+                  >Ürün Listesi</a
+                >
+              </li>
+
+              <!-- Nav item -->
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'add') { active }"
+                  href="@@webRoot/dashboard/products/add.html"
+                  >Ürün Ekle</a
+                >
+              </li>
+
+              <!-- Nav item -->
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'picture-gallery') { active }"
+                  href="@@webRoot/dashboard/products/picture-gallery.html"
+                  >Görsel Galerisi</a
+                >
+              </li>
+
+              <!-- Nav item -->
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'reviews') { active }"
+                  href="@@webRoot/dashboard/products/reviews.html"
+                  >Değerlendirmeler</a
+                >
+              </li>
+
+              <!-- Nav item -->
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'discount') { active }"
+                  href="@@webRoot/dashboard/products/discount.html"
+                  >İndirimler</a
+                >
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link @@if (context.page_group !== 'orders-and-cargo') { collapsed }"
+            href="#"
+            data-bs-toggle="collapse"
+            data-bs-target="#navOrdersAndCargo"
+            aria-expanded="false"
+            aria-controls="navOrdersAndCargo"
+          >
+            <div class="d-flex align-items-center">
+              <span class="nav-link-icon"><i class="bi bi-truck"></i></span>
+              <span class="nav-link-text">Sipariş & Kargo</span>
+            </div>
+          </a>
+
+          <div
+            id="navOrdersAndCargo"
+            class="collapse @@if (context.page_group === 'orders-and-cargo') { show }"
+            data-bs-parent="#sideNavbar"
+          >
+            <ul class="nav flex-column">
+              <!-- Nav item -->
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'orders') { active }"
+                  href="@@webRoot/dashboard/orders/list.html"
+                  >Siparişler</a
+                >
+              </li>
+
+              <!-- Nav item -->
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'items-in-shipping-phase') { active }"
+                  href="@@webRoot/dashboard/orders/items-in-shipping-phase.html"
+                  >Kargo Aşamasındakiler</a
+                >
+              </li>
+
+              <!-- Nav item -->
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'cancelled') { active }"
+                  href="@@webRoot/dashboard/orders/cancelled.html"
+                  >İptal Edilenler</a
+                >
+              </li>
+
+              <!-- Nav item -->
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'return-procedures') { active }"
+                  href="@@webRoot/dashboard/orders/return-procedures.html"
+                  >İade İşlemleri</a
+                >
+              </li>
+
+              <!-- Nav item -->
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'cargo-transactions') { active }"
+                  href="@@webRoot/dashboard/orders/cargo-transactions.html"
+                  >Kargo İşlemleri</a
+                >
+              </li>
+
+              <!-- Nav item -->
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'order-questions') { active }"
+                  href="@@webRoot/dashboard/orders/order-questions.html"
+                  >Sipariş Soruları</a
+                >
+              </li>
+              <!-- Nav item -->
+
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'customer-requests') { active }"
+                  href="@@webRoot/dashboard/orders/customer-request.html"
+                  >Müşteri Talepleri</a
+                >
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link @@if (context.page_group !== 'categories') { collapsed }"
+            href="#"
+            data-bs-toggle="collapse"
+            data-bs-target="#navCategories"
+            aria-expanded="false"
+            aria-controls="navCategories"
+          >
+            <div class="d-flex align-items-center">
+              <span class="nav-link-icon"
+                ><i class="bi bi-menu-button-wide"></i>
+              </span>
+              <span class="nav-link-text">Kategoriler</span>
+            </div>
+          </a>
+
+          <div
+            id="navCategories"
+            class="collapse @@if (context.page_group === 'categories') { show }"
+            data-bs-parent="#sideNavbar"
+          >
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'add-category') { active }"
+                  href="@@webRoot/dashboard/categories/add.html"
+                  >Kargo Ekle</a
+                >
+              </li>
+              <!-- Nav item -->
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'category-list') { active }"
+                  href="@@webRoot/dashboard/categories/list.html"
+                  >Kategori Listesi</a
+                >
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link @@if (context.page_group !== 'sliders') { collapsed }"
+            href="#"
+            data-bs-toggle="collapse"
+            data-bs-target="#navSlider"
+            aria-expanded="false"
+            aria-controls="navSlider"
+          >
+            <div class="d-flex align-items-center">
+              <span class="nav-link-icon"><i class="bi bi-images"></i> </span>
+              <span class="nav-link-text">Pano</span>
+            </div>
+          </a>
+
+          <div
+            id="navSlider"
+            class="collapse @@if (context.page_group === 'sliders') { show }"
+            data-bs-parent="#sideNavbar"
+          >
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'add-slider') { active }"
+                  href="@@webRoot/dashboard/sliders/add.html"
+                  >Pano Ekle</a
+                >
+              </li>
+              <!-- Nav item -->
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'slider-list') { active }"
+                  href="@@webRoot/dashboard/sliders/list.html"
+                  >Pano Listesi</a
+                >
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link @@if (context.page_group !== 'staff') { collapsed }"
+            href="#"
+            data-bs-toggle="collapse"
+            data-bs-target="#navStaff"
+            aria-expanded="false"
+            aria-controls="navStaff"
+          >
+            <div class="d-flex align-items-center">
+              <span class="nav-link-icon"><i class="bi bi-people"></i> </span>
+              <span class="nav-link-text">Personeller</span>
+            </div>
+          </a>
+
+          <div
+            id="navStaff"
+            class="collapse @@if (context.page_group === 'staff') { show }"
+            data-bs-parent="#sideNavbar"
+          >
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'add-staff') { active }"
+                  href="@@webRoot/dashboard/staff/add.html"
+                  >Personel Ekle</a
+                >
+              </li>
+              <!-- Nav item -->
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'staff-list') { active }"
+                  href="@@webRoot/dashboard/staff/list.html"
+                  >Personel Listesi</a
+                >
+              </li>
+
+              <!-- Nav item -->
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'staff-powers') { active }"
+                  href="@@webRoot/dashboard/staff/powers.html"
+                  >Personel Yetkileri</a
+                >
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link @@if (context.page === 'notifications') { active } d-flex justify-content-between align-items-center"
+            href="@@webRoot/dashboard/notifications/notifications.html"
+          >
+            <div class="d-flex align-items-center">
+              <span class="nav-link-icon"><i class="bi bi-bell"></i> </span>
+              <span class="nav-link-text">Bildirimler</span>
+            </div>
+
+            <div class="badge bg-warning px-3">5</div>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link @@if (context.page === 'messages') { active } d-flex justify-content-between align-items-center"
+            href="@@webRoot/dashboard/messages/messages.html"
+          >
+            <div class="d-flex align-items-center">
+              <span class="nav-link-icon"><i class="bi bi-envelope"></i> </span>
+              <span class="nav-link-text">Mesajlar</span>
+            </div>
+
+            <div class="badge bg-primary px-3">5</div>
+          </a>
+        </li>
+
+        <li class="nav-item mt-6 mb-3">
+          <span class="nav-label">Sayfa Yönetimi</span>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link @@if (context.page === 'about-page') { active }"
+            href=""
+          >
+            <div class="d-flex align-items-center">
+              <span class="nav-link-icon"><i class="bi bi-file"></i> </span>
+              <span class="nav-link-text">Hakkımızda Sayfası</span>
+            </div>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link @@if (context.page === 'contact-page') { active }"
+            href=""
+          >
+            <div class="d-flex align-items-center">
+              <span class="nav-link-icon"><i class="bi bi-file"></i> </span>
+              <span class="nav-link-text">İletişim Sayfası</span>
+            </div>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link @@if (context.page === 'cargo-page') { active }"
+            href=""
+          >
+            <div class="d-flex align-items-center">
+              <span class="nav-link-icon"><i class="bi bi-file"></i> </span>
+              <span class="nav-link-text">Kargo Takip Sayfası</span>
+            </div>
+          </a>
+        </li>
+
+        <li class="nav-item mt-6 mb-3">
+          <span class="nav-label">Raporlar</span>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link @@if (context.page !== 'live-report') { collapsed }"
+            href="#"
+            data-bs-toggle="collapse"
+            data-bs-target="#liveReport"
+            aria-expanded="false"
+            aria-controls="liveReport"
+          >
+            <div class="d-flex align-items-center">
+              <span class="nav-link-icon"
+                ><i class="bi bi-clipboard2-data-fill"></i>
+              </span>
+              <span class="nav-link-text">Canlı Performans</span>
+            </div>
+          </a>
+
+          <div
+            id="liveReport"
+            class="collapse @@if (context.page_group === 'live-report') { show }"
+            data-bs-parent="#sideNavbar"
+          >
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'general-performance') { active }"
+                  href=""
+                  >Genel Performans</a
+                >
+              </li>
+              <!-- Nav item -->
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'product-performance') { active }"
+                  href=""
+                  >Ürün Performansı</a
+                >
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link @@if (context.page !== 'sales-and-operations-reports') { collapsed }"
+            href="#"
+            data-bs-toggle="collapse"
+            data-bs-target="#salesAndOperationsReports"
+            aria-expanded="false"
+            aria-controls="salesAndOperationsReports"
+          >
+            <div class="d-flex align-items-center">
+              <span class="nav-link-icon"
+                ><i class="bi bi-clipboard2-data-fill"></i>
+              </span>
+              <span class="nav-link-text">Satış & Operasyon Raporları</span>
+            </div>
+          </a>
+
+          <div
+            id="salesAndOperationsReports"
+            class="collapse @@if (context.page_group === 'sales-and-operations-reports') { show }"
+            data-bs-parent="#sideNavbar"
+          >
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'sales-operations') { active }"
+                  href=""
+                  >Satış Operasyonları</a
+                >
+              </li>
+              <!-- Nav item -->
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'cancellation-reports') { active }"
+                  href=""
+                  >İptal Raporları</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'return-reports') { active }"
+                  href=""
+                  >İade Raporlar</a
+                >
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link @@if (context.page !== 'sales-increase-reports') { collapsed }"
+            href="#"
+            data-bs-toggle="collapse"
+            data-bs-target="#salesIncreaseReports"
+            aria-expanded="false"
+            aria-controls="salesIncreaseReports"
+          >
+            <div class="d-flex align-items-center">
+              <span class="nav-link-icon"
+                ><i class="bi bi-clipboard2-data-fill"></i>
+              </span>
+              <span class="nav-link-text">Satış Arttırma Raporları</span>
+            </div>
+          </a>
+
+          <div
+            id="salesIncreaseReports"
+            class="collapse @@if (context.page_group === 'sales-increase-reports') { show }"
+            data-bs-parent="#sideNavbar"
+          >
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'favori-view-report') { active }"
+                  href=""
+                  >Favori & Görüntüleme Raporu</a
+                >
+              </li>
+              <!-- Nav item -->
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'campaign-report') { active }"
+                  href=""
+                  >Kampanya Raporları</a
+                >
+              </li>
+              <!-- Nav item -->
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'discount-report') { active }"
+                  href=""
+                  >İndirim Raporu</a
+                >
+              </li>
+              <!-- Nav item -->
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'store-report') { active }"
+                  href=""
+                  >Mağaza Raporu</a
+                >
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link @@if (context.page !== 'reviews-report') { collapsed }"
+            href="#"
+            data-bs-toggle="collapse"
+            data-bs-target="#reviewsReport"
+            aria-expanded="false"
+            aria-controls="reviewsReport"
+          >
+            <div class="d-flex align-items-center">
+              <span class="nav-link-icon"
+                ><i class="bi bi-clipboard2-data-fill"></i>
+              </span>
+              <span class="nav-link-text">Değerlendirme Raporu</span>
+            </div>
+          </a>
+
+          <div
+            id="reviewsReport"
+            class="collapse @@if (context.page_group === 'reviews-report') { show }"
+            data-bs-parent="#sideNavbar"
+          >
+            <ul class="nav flex-column">
+              <!-- Nav item -->
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'review') { active }"
+                  href=""
+                  >Ürün Değerlendirmeleri</a
+                >
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="nav-item mt-6 mb-3">
+          <span class="nav-label">Ayarlar</span>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link @@if (context.page === 'settings') { active }"
+            href="@@webRoot/dashboard/settings/settings.html"
+          >
+            <div class="d-flex align-items-center">
+              <span class="nav-link-icon"><i class="bi bi-gear"></i></span>
+              <span class="nav-link-text">Ayarlar</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- RESPONSIVE NAVBAR -->
+<nav
+  class="navbar-vertical-nav offcanvas offcanvas-start navbar-offcanvac"
+  tabindex="-1"
+  id="offcanvasExample"
+>
+  <div class="navbar-vertical">
+    <div class="px-4 py-5">
+      <a href="@@webRoot/dashboard/index.html" class="navbar-brand">
+        <img
+          src="@@webRoot/assets/images/logo/logo.png"
+          style="width: 200px"
+          alt=""
+        />
+      </a>
+    </div>
+
+    <div class="navbar-vertical-content flex-grow-1" data-simplebar="">
+      <ul class="navbar-nav flex-column" id="sideNavbar">
+        <li class="nav-item">
+          <a
+            class="nav-link @@if (context.page === 'dashboard') { active }"
+            href="@@webRoot/dashboard/index.html"
+          >
+            <div class="d-flex align-items-center">
+              <span class="nav-link-icon"><i class="bi bi-house"></i></span>
+              <span class="nav-link-text">Panel</span>
+            </div>
+          </a>
+        </li>
+
+        <li class="nav-item mt-6 mb-3">
+          <span class="nav-label">Mağaza Yönetimi</span>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link @@if (context.page_group !== 'products') { collapsed }"
+            href="#"
+            data-bs-toggle="collapse"
+            data-bs-target="#navProducts"
+            aria-expanded="false"
+            aria-controls="navProducts"
+          >
+            <div class="d-flex align-items-center">
+              <span class="nav-link-icon"><i class="bi bi-list-ul"></i></span>
+              <span class="nav-link-text">Ürünler</span>
+            </div>
+          </a>
+
+          <div
+            id="navProducts"
+            class="collapse @@if (context.page_group === 'products') { show }"
+            data-bs-parent="#sideNavbar"
+          >
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'list') { active }"
+                  href="@@webRoot/dashboard/products/products.html"
+                  >Ürün Listesi</a
+                >
+              </li>
+
+              <!-- Nav item -->
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'add') { active }"
+                  href="@@webRoot/dashboard/products/add.html"
+                  >Ürün Ekle</a
+                >
+              </li>
+
+              <!-- Nav item -->
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'picture-gallery') { active }"
+                  href=""
+                  >Görsel Galerisi</a
+                >
+              </li>
+
+              <!-- Nav item -->
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'reviews') { active }"
+                  href=""
+                  >Değerlendirmeler</a
+                >
+              </li>
+
+              <!-- Nav item -->
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'discounts') { active }"
+                  href=""
+                  >İndirimler</a
+                >
+              </li>
+
+              <!-- Nav item -->
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'campaigns') { active }"
+                  href=""
+                  >Kampanyalar</a
+                >
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link @@if (context.page_group === 'orders-and-cargo') { collapsed }"
+            href="#"
+            data-bs-toggle="collapse"
+            data-bs-target="#navOrdersAndCargo"
+            aria-expanded="false"
+            aria-controls="navOrdersAndCargo"
+          >
+            <div class="d-flex align-items-center">
+              <span class="nav-link-icon"><i class="bi bi-truck"></i></span>
+              <span class="nav-link-text">Sipariş & Kargo</span>
+            </div>
+          </a>
+
+          <div
+            id="navOrdersAndCargo"
+            class="collapse @@if (context.page_group === 'orders-and-cargo') { show }"
+            data-bs-parent="#sideNavbar"
+          >
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'items-in-shipping-phase') { active }"
+                  href=""
+                  >Kargo Aşamasındakiler</a
+                >
+              </li>
+              <!-- Nav item -->
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'canceled') { active }"
+                  href=""
+                  >İptal Edilenler</a
+                >
+              </li>
+              <!-- Nav item -->
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'return-procedures') { active }"
+                  href=""
+                  >İade İşlemleri</a
+                >
+              </li>
+              <!-- Nav item -->
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'cargo-transactions') { active }"
+                  href=""
+                  >Kargo İşlemleri</a
+                >
+              </li>
+              <!-- Nav item -->
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'order-questions') { active }"
+                  href=""
+                  >Sipariş Soruları</a
+                >
+              </li>
+              <!-- Nav item -->
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'customer-requests') { active }"
+                  href=""
+                  >Müşteri Talepleri</a
+                >
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link @@if (context.page_group === 'categories') { collapsed }"
+            href="#"
+            data-bs-toggle="collapse"
+            data-bs-target="#navCategories"
+            aria-expanded="false"
+            aria-controls="navCategories"
+          >
+            <div class="d-flex align-items-center">
+              <span class="nav-link-icon"
+                ><i class="bi bi-menu-button-wide"></i>
+              </span>
+              <span class="nav-link-text">Kategoriler</span>
+            </div>
+          </a>
+
+          <div
+            id="navCategories"
+            class="collapse @@if (context.page_group === 'orders-and-cargo') { show }"
+            data-bs-parent="#sideNavbar"
+          >
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'add-category') { active }"
+                  href=""
+                  >Kargo Ekle</a
+                >
+              </li>
+              <!-- Nav item -->
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'category-list') { active }"
+                  href=""
+                  >Kategori Listesi</a
+                >
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link @@if (context.page_group === 'sliders') { collapsed }"
+            href="#"
+            data-bs-toggle="collapse"
+            data-bs-target="#navSlider"
+            aria-expanded="false"
+            aria-controls="navSlider"
+          >
+            <div class="d-flex align-items-center">
+              <span class="nav-link-icon"><i class="bi bi-images"></i> </span>
+              <span class="nav-link-text">Pano</span>
+            </div>
+          </a>
+
+          <div
+            id="navSlider"
+            class="collapse @@if (context.page_group === 'orders-and-cargo') { show }"
+            data-bs-parent="#sideNavbar"
+          >
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'add-slider') { active }"
+                  href=""
+                  >Pano Ekle</a
+                >
+              </li>
+              <!-- Nav item -->
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'slider-list') { active }"
+                  href=""
+                  >Pano Listesi</a
+                >
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link @@if (context.page_group === 'sliders') { collapsed }"
+            href="#"
+            data-bs-toggle="collapse"
+            data-bs-target="#navCustomers"
+            aria-expanded="false"
+            aria-controls="navCustomers"
+          >
+            <div class="d-flex align-items-center">
+              <span class="nav-link-icon"><i class="bi bi-people"></i> </span>
+              <span class="nav-link-text">Personeller</span>
+            </div>
+          </a>
+
+          <div
+            id="navCustomers"
+            class="collapse @@if (context.page_group === 'orders-and-cargo') { show }"
+            data-bs-parent="#sideNavbar"
+          >
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'add-slider') { active }"
+                  href=""
+                  >Personel Ekle</a
+                >
+              </li>
+              <!-- Nav item -->
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'slider-list') { active }"
+                  href=""
+                  >Personel Listesi</a
+                >
+              </li>
+
+              <!-- Nav item -->
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'slider-list') { active }"
+                  href=""
+                  >Personel Yetkileri</a
+                >
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link @@if (context.page === 'notifications') { active } d-flex justify-content-between align-items-center"
+            href=""
+          >
+            <div class="d-flex align-items-center">
+              <span class="nav-link-icon"><i class="bi bi-bell"></i> </span>
+              <span class="nav-link-text">Bildirimler</span>
+            </div>
+
+            <div class="badge bg-warning px-3">5</div>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link @@if (context.page === 'notifications') { active } d-flex justify-content-between align-items-center"
+            href=""
+          >
+            <div class="d-flex align-items-center">
+              <span class="nav-link-icon"><i class="bi bi-envelope"></i> </span>
+              <span class="nav-link-text">Mesajlar</span>
+            </div>
+
+            <div class="badge bg-primary px-3">5</div>
+          </a>
+        </li>
+
+        <li class="nav-item mt-6 mb-3">
+          <span class="nav-label">Sayfa Yönetimi</span>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link @@if (context.page === 'about-page') { active }"
+            href=""
+          >
+            <div class="d-flex align-items-center">
+              <span class="nav-link-icon"><i class="bi bi-file"></i> </span>
+              <span class="nav-link-text">Hakkımızda Sayfası</span>
+            </div>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link @@if (context.page === 'contact-page') { active }"
+            href=""
+          >
+            <div class="d-flex align-items-center">
+              <span class="nav-link-icon"><i class="bi bi-file"></i> </span>
+              <span class="nav-link-text">İletişim Sayfası</span>
+            </div>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link @@if (context.page === 'cargo-page') { active }"
+            href=""
+          >
+            <div class="d-flex align-items-center">
+              <span class="nav-link-icon"><i class="bi bi-file"></i> </span>
+              <span class="nav-link-text">Kargo Takip Sayfası</span>
+            </div>
+          </a>
+        </li>
+
+        <li class="nav-item mt-6 mb-3">
+          <span class="nav-label">Raporlar</span>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link @@if (context.page === 'live-report') { collapsed }"
+            href="#"
+            data-bs-toggle="collapse"
+            data-bs-target="#liveReport"
+            aria-expanded="false"
+            aria-controls="liveReport"
+          >
+            <div class="d-flex align-items-center">
+              <span class="nav-link-icon"
+                ><i class="bi bi-clipboard2-data-fill"></i>
+              </span>
+              <span class="nav-link-text">Canlı Performans</span>
+            </div>
+          </a>
+
+          <div
+            id="liveReport"
+            class="collapse @@if (context.page_group === 'orders-and-cargo') { show }"
+            data-bs-parent="#sideNavbar"
+          >
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'general-performance') { active }"
+                  href=""
+                  >Genel Performans</a
+                >
+              </li>
+              <!-- Nav item -->
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'product-performance') { active }"
+                  href=""
+                  >Ürün Performansı</a
+                >
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link @@if (context.page === 'sales-and-operations-reports') { collapsed }"
+            href="#"
+            data-bs-toggle="collapse"
+            data-bs-target="#salesAndOperationsReports"
+            aria-expanded="false"
+            aria-controls="salesAndOperationsReports"
+          >
+            <div class="d-flex align-items-center">
+              <span class="nav-link-icon"
+                ><i class="bi bi-clipboard2-data-fill"></i>
+              </span>
+              <span class="nav-link-text">Satış & Operasyon Raporları</span>
+            </div>
+          </a>
+
+          <div
+            id="salesAndOperationsReports"
+            class="collapse @@if (context.page_group === 'orders-and-cargo') { show }"
+            data-bs-parent="#sideNavbar"
+          >
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'sales-operations') { active }"
+                  href=""
+                  >Satış Operasyonları</a
+                >
+              </li>
+              <!-- Nav item -->
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'cancellation-reports') { active }"
+                  href=""
+                  >İptal Raporları</a
+                >
+              </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'return-reports') { active }"
+                  href=""
+                  >İade Raporlar</a
+                >
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link @@if (context.page === 'sales-increase-reports') { collapsed }"
+            href="#"
+            data-bs-toggle="collapse"
+            data-bs-target="#salesIncreaseReports"
+            aria-expanded="false"
+            aria-controls="salesIncreaseReports"
+          >
+            <div class="d-flex align-items-center">
+              <span class="nav-link-icon"
+                ><i class="bi bi-clipboard2-data-fill"></i>
+              </span>
+              <span class="nav-link-text">Satış Arttırma Raporları</span>
+            </div>
+          </a>
+
+          <div
+            id="salesIncreaseReports"
+            class="collapse @@if (context.page_group === 'orders-and-cargo') { show }"
+            data-bs-parent="#sideNavbar"
+          >
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'favori-view-report') { active }"
+                  href=""
+                  >Favori & Görüntüleme Raporu</a
+                >
+              </li>
+              <!-- Nav item -->
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'campaign-report') { active }"
+                  href=""
+                  >Kampanya Raporları</a
+                >
+              </li>
+              <!-- Nav item -->
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'discount-report') { active }"
+                  href=""
+                  >İndirim Raporu</a
+                >
+              </li>
+              <!-- Nav item -->
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'store-report') { active }"
+                  href=""
+                  >Mağaza Raporu</a
+                >
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link @@if (context.page === 'reviews-report') { collapsed }"
+            href="#"
+            data-bs-toggle="collapse"
+            data-bs-target="#reviewsReport"
+            aria-expanded="false"
+            aria-controls="reviewsReport"
+          >
+            <div class="d-flex align-items-center">
+              <span class="nav-link-icon"
+                ><i class="bi bi-clipboard2-data-fill"></i>
+              </span>
+              <span class="nav-link-text">Değerlendirme Raporu</span>
+            </div>
+          </a>
+
+          <div
+            id="reviewsReport"
+            class="collapse @@if (context.page_group === 'products-reviews-report') { show }"
+            data-bs-parent="#sideNavbar"
+          >
+            <ul class="nav flex-column">
+              <!-- Nav item -->
+              <li class="nav-item">
+                <a
+                  class="nav-link @@if (context.page === 'review') { active }"
+                  href=""
+                  >Ürün Değerlendirmeleri</a
+                >
+              </li>
+            </ul>
+          </div>
+        </li>
+
+        <li class="nav-item mt-6 mb-3">
+          <span class="nav-label">Ayarlar</span>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link @@if (context.page === 'settings') { active }"
+            href="@@webRoot/dashboard/index.html"
+          >
+            <div class="d-flex align-items-center">
+              <span class="nav-link-icon"><i class="bi bi-gear"></i></span>
+              <span class="nav-link-text">Ayarlar</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include("../../partials/head/head-meta.html")
+    <title>Add Category Dashboard eCommerce HTML Template - FreshCart</title>
+    <link
+      href="@@webRoot/node_modules/dropzone/dist/min/dropzone.min.css"
+      rel="stylesheet"
+    />
+    @@include("../../partials/head/head-links.html")
+    @@include("../../partials/head/analytics-code.html")
+  </head>
+
+  <body>
+    <!-- main wrapper -->
+
+    @@include("../../partials/top-navbar.html")
+
+    <div class="main-wrapper">
+      <!-- navbar vertical -->
+      @@include('../../partials/navbar-vertical.html', { "page_group": "staff",
+      "page": "add-staff" })
+
+      <!-- main -->
+      <main class="main-content-wrapper">
+        <!-- container -->
+        <div class="container">
+          <!-- row -->
+          <div class="row mb-8">
+            <div class="col-md-12">
+              <div class="d-md-flex justify-content-between align-items-center">
+                <!-- page header -->
+                <div>
+                  <h2>Yeni Personel Ekle</h2>
+                  <!-- breacrumb -->
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                      <li class="breadcrumb-item">
+                        <a
+                          href="@@webRoot/dashboard/index.html"
+                          class="text-inherit"
+                          >Panel</a
+                        >
+                      </li>
+                      <li class="breadcrumb-item">
+                        <a
+                          href="@@webRoot/dashboard/staff/list.html"
+                          class="text-inherit"
+                          >Personeller</a
+                        >
+                      </li>
+                      <li class="breadcrumb-item active" aria-current="page">
+                        Yeni Personel Ekle
+                      </li>
+                    </ol>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12 col-12">
+              <!-- card -->
+              <div class="card mb-6 shadow border-0">
+                <!-- card body -->
+                <div class="card-body p-6">
+                  <h4 class="mb-4 h5 mt-5">Personel Bilgileri</h4>
+
+                  <div class="row">
+                    <!-- input -->
+                    <div class="mb-3 col-lg-6">
+                      <label class="form-label">Personel Ad</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Personel Ad"
+                        required
+                      />
+                    </div>
+
+                    <!-- input -->
+                    <div class="mb-3 col-lg-6">
+                      <label class="form-label">Personel Soyad</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Personel Soyad"
+                        required
+                      />
+                    </div>
+
+                    <div class="mb-3 col-lg-6">
+                      <label class="form-label">Maaş Bilgisi</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        placeholder="Maaş"
+                        required
+                      />
+                    </div>
+
+                    <!-- input -->
+                    <div class="mb-3 col-lg-6">
+                      <label class="form-label">Durum</label>
+                      <select class="form-select">
+                        <option value="">Aktif</option>
+                        <option value="">Pasif</option>
+                      </select>
+                    </div>
+
+                    <!-- input -->
+                    <div class="mb-3 col-lg-6">
+                      <label class="form-label">Giriş Tarihi</label>
+                      <input
+                        type="text"
+                        class="form-control flatpickr"
+                        placeholder="Giriş Tarihi"
+                      />
+                    </div>
+
+                    <!-- input -->
+                    <div class="mb-3 col-lg-6">
+                      <label class="form-label">Çıkış Tarihi</label>
+                      <input
+                        type="text"
+                        class="form-control flatpickr"
+                        placeholder="Çıkış Tarihi"
+                      />
+                    </div>
+
+                    <!-- input -->
+                    <div class="mb-3 col-lg-6">
+                      <label class="form-label">Yetkiler</label>
+                      <select
+                        class="form-select"
+                        multiple
+                        style="height: 200px"
+                      >
+                        <option value="">Yetki</option>
+                        <option value="">Yetki</option>
+                        <option value="">Yetki</option>
+                        <option value="">Yetki</option>
+                        <option value="">Yetki</option>
+                        <option value="">Yetki</option>
+                        <option value="">Yetki</option>
+                        <option value="">Yetki</option>
+                      </select>
+                    </div>
+
+                    <div class="col-lg-12">
+                      <a href="#" class="btn btn-primary">Personel Ekle</a>
+                      <a href="#" class="btn btn-secondary ms-2">Taslak</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="@@webRoot/node_modules/flatpickr/dist/flatpickr.min.js"></script>
+    @@include("../../partials/scripts.html")
+    <script src="@@webRoot/node_modules/quill/dist/quill.min.js"></script>
+    <script src="@@webRoot/assets/js/vendors/editor.js"></script>
+    <script src="@@webRoot/node_modules/dropzone/dist/min/dropzone.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include("../../partials/head/head-meta.html")
+    <title>Settings eCommerce HTML Template - FreshCart</title>
+    @@include("../../partials/head/head-links.html")
+    @@include("../../partials/head/analytics-code.html")
+  </head>
+
+  <body>
+    @@include("../../partials/navbar.html")
+    <main>
+      <!-- section -->
+      <section>
+        <!-- container -->
+        <div class="container">
+          <!-- row -->
+          <div class="row">
+            <!-- col -->
+            <div class="col-lg-3 col-md-4 col-12 border-end d-none d-md-block">
+              <div class="pt-10 pe-lg-10">
+                <!-- nav -->
+                <ul class="nav flex-column nav-pills nav-pills-dark">
+                  <!-- nav item -->
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      aria-current="page"
+                      href="@@webRoot/pages/account/orders.html"
+                    >
+                      <i class="feather-icon icon-shopping-bag me-2"></i>
+                      Siparişlerim
+                    </a>
+                  </li>
+
+                  <!-- nav item -->
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active"
+                      href="@@webRoot/pages/account/settings.html"
+                    >
+                      <i class="feather-icon icon-settings me-2"></i>
+                      Ayarlar
+                    </a>
+                  </li>
+
+                  <!-- nav item -->
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      href="@@webRoot/pages/account/address.html"
+                    >
+                      <i class="feather-icon icon-map-pin me-2"></i>
+                      Adreslerim
+                    </a>
+                  </li>
+
+                  <!-- nav item -->
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      href="@@webRoot/pages/account/notification.html"
+                    >
+                      <i class="feather-icon icon-bell me-2"></i>
+                      Bildirimler
+                    </a>
+                  </li>
+                  <!-- nav item -->
+                  <li class="nav-item">
+                    <hr />
+                  </li>
+                  <!-- nav item -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="@@webRoot/index.html">
+                      <i class="feather-icon icon-log-out me-2"></i>
+                      Çıkış Yap
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-9 col-md-8 col-12">
+              <div class="py-6 p-md-6 p-lg-10">
+                <div class="mb-6">
+                  <!-- heading -->
+                  <h2 class="mb-0">Hesap Ayarları</h2>
+                </div>
+
+                <div>
+                  <!-- heading -->
+                  <h5 class="mb-4">Hesap Detayları</h5>
+                  <div class="row">
+                    <div class="col-lg-5">
+                      <!-- form -->
+                      <form>
+                        <!-- input -->
+                        <div class="mb-3">
+                          <label class="form-label">Adınız</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Adınızı Giriniz..."
+                          />
+                        </div>
+                        <!-- input -->
+                        <div class="mb-3">
+                          <label class="form-label">Email</label>
+                          <input
+                            type="email"
+                            class="form-control"
+                            placeholder="example@gmail.com"
+                          />
+                        </div>
+                        <!-- input -->
+                        <div class="mb-5">
+                          <label class="form-label">Telefon Numaranız</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="0 (500) 000 00 00"
+                          />
+                        </div>
+                        <!-- button -->
+                        <div class="mb-3">
+                          <button class="btn btn-outline-primary">
+                            Güncelle
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+
+                <hr class="my-10" />
+
+                <div class="pe-lg-14">
+                  <!-- heading -->
+                  <h5 class="mb-4">Password</h5>
+                  <form class="row row-cols-1 row-cols-lg-2">
+                    <!-- input -->
+                    <div class="mb-3 col">
+                      <label class="form-label">Eski Şifreniz</label>
+                      <input
+                        type="password"
+                        class="form-control"
+                        placeholder="**********"
+                      />
+                    </div>
+
+                    <div>
+                      <!-- input -->
+                      <div class="mb-3 col">
+                        <label class="form-label">Yeni Şifreniz</label>
+                        <input
+                          type="password"
+                          class="form-control"
+                          placeholder="**********"
+                        />
+                      </div>
+
+                      <!-- input -->
+                      <div class="mb-3 col">
+                        <label class="form-label">Yeni Şifreniz Tekrar</label>
+                        <input
+                          type="password"
+                          class="form-control"
+                          placeholder="**********"
+                        />
+                      </div>
+                    </div>
+
+                    <!-- input -->
+                    <div class="col-12">
+                      <p class="mb-4">
+                        Mevcut şifrenizi hatırlamıyor musunuz?
+                        <a href="#">Şifrenizi Sıfırlayın</a>
+                      </p>
+                      <a href="#" class="btn btn-outline-primary">Güncelle</a>
+                    </div>
+                  </form>
+                </div>
+
+                <hr class="my-10" />
+
+                <div>
+                  <!-- heading -->
+                  <h5 class="mb-4">Hesabımı Sil</h5>
+                  <p class="mb-2">Hesabınızı silmek istiyor musunuz?</p>
+                  <p class="mb-5">
+                    Bu hesap 12 sipariş içeriyor. Hesabınızı sildiğinizde onunla
+                    ilişkili tüm sipariş ayrıntılarını kaldırılacaktır.
+                  </p>
+                  <!-- btn -->
+                  <a href="#" class="btn btn-outline-danger"
+                    >Hesabımı Silmek İstiyorum</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- modal -->
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="offcanvasAccount"
+      aria-labelledby="offcanvasAccountLabel"
+    >
+      <!-- offcanvas header -->
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasAccountLabel">Offcanvas</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <!-- offcanvas body -->
+      <div class="offcanvas-body">
+        <ul class="nav flex-column nav-pills nav-pills-dark">
+          <!-- nav item -->
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="account-orders.html">
+              <i class="feather-icon icon-shopping-bag me-2"></i>
+              Your Orders
+            </a>
+          </li>
+          <!-- nav item -->
+
+          <li class="nav-item">
+            <a class="nav-link active" href="account-settings.html">
+              <i class="feather-icon icon-settings me-2"></i>
+              Settings
+            </a>
+          </li>
+          <!-- nav item -->
+
+          <li class="nav-item">
+            <a class="nav-link" href="account-address.html">
+              <i class="feather-icon icon-map-pin me-2"></i>
+              Address
+            </a>
+          </li>
+          <!-- nav item -->
+
+          <li class="nav-item">
+            <a class="nav-link" href="account-payment-method.html">
+              <i class="feather-icon icon-credit-card me-2"></i>
+              Payment Method
+            </a>
+          </li>
+          <!-- nav item -->
+
+          <li class="nav-item">
+            <a class="nav-link" href="account-notification.html">
+              <i class="feather-icon icon-bell me-2"></i>
+              Notification
+            </a>
+          </li>
+        </ul>
+        <hr class="my-6" />
+        <div>
+          <!-- navs -->
+          <ul class="nav flex-column nav-pills nav-pills-dark">
+            <!-- nav item -->
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">
+                <i class="feather-icon icon-log-out me-2"></i>
+                Log out
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    @@include("../../partials/footer.html")
+    <!-- Javascript-->
+    @@include("../../partials/scripts.html")
+  </body>
+</html>

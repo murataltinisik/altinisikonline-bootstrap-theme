@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include("../../partials/head/head-meta.html")
+    <title>Contact eCommerce HTML Template - FreshCart</title>
+    @@include("../../partials/head/head-links.html")
+    @@include("../../partials/head/analytics-code.html")
+  </head>
+
+  <body>
+    @@include("../../partials/navbar.html")
+    <main>
+      <!-- section -->
+
+      <section class="my-lg-14 my-8">
+        <!-- container -->
+        <div class="container">
+          <div class="row">
+            <!-- col -->
+            <div class="offset-lg-2 col-lg-8 col-12">
+              <div class="mb-8">
+                <!-- heading -->
+                <h1 class="h3">Mesaj Gönder</h1>
+              </div>
+
+              <!-- form -->
+              <form class="row needs-validation" novalidate>
+                <!-- input -->
+                <div class="col-md-6 mb-3">
+                  <label class="form-label" for="contactFName">
+                    Adınız
+                    <span class="text-danger">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="contactFName"
+                    class="form-control"
+                    name="contactFName"
+                    placeholder="Adınızı Giriniz..."
+                    required
+                  />
+                  <div class="invalid-feedback">Adınızı Giriniz!</div>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                  <!-- input -->
+                  <label class="form-label" for="contactLName">
+                    Soyadınız
+                    <span class="text-danger">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="contactLName"
+                    class="form-control"
+                    name="contactLName"
+                    placeholder="Soyadınız Giriniz..."
+                    required
+                  />
+                  <div class="invalid-feedback">Soyadınız Giriniz!</div>
+                </div>
+
+                <div class="col-md-12 mb-3">
+                  <!-- input -->
+                  <label class="form-label" for="contactTitle">Konu</label>
+                  <select
+                    type="text"
+                    id="contactTitle"
+                    name="contactTitle"
+                    class="form-control"
+                    placeholder="Mesaj Konu"
+                    required
+                  >
+                    <option value="">Konu Seçiniz</option>
+                  </select>
+
+                  <div class="invalid-feedback">
+                    Bir Mesaj Konusu seçmelisiniz!
+                  </div>
+                </div>
+
+                <div class="col-md-12 mb-3">
+                  <label class="form-label" for="contactEmail">
+                    Email
+                    <span class="text-danger">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    id="contactEmail"
+                    name="contactEmail"
+                    class="form-control"
+                    placeholder="Email adresinizi giriniz..."
+                    required
+                  />
+                  <div class="invalid-feedback">Email adresinizi giriniz!</div>
+                </div>
+
+                <div class="col-md-12 mb-3">
+                  <!-- input -->
+                  <label class="form-label" for="contactTearea">Message</label>
+                  <textarea
+                    rows="3"
+                    id="contactTearea"
+                    class="form-control"
+                    placeholder="Additional Comments"
+                    required
+                  ></textarea>
+
+                  <div class="invalid-feedback">
+                    Lütfen mesajınızı giriniz...
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <!-- btn -->
+                  <button type="submit" class="btn btn-outline-primary w-100">
+                    Gönder
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    @@include("../../partials/footer.html")
+    <!-- Javascript-->
+    @@include("../../partials/scripts.html")
+    <script src="@@webRoot/assets/js/vendors/validation.js"></script>
+  </body>
+</html>

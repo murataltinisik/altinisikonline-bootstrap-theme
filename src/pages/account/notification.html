@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include("../../partials/head/head-meta.html")
+    <title>Notification eCommerce HTML Template - FreshCart</title>
+    @@include("../../partials/head/head-links.html")
+    @@include("../../partials/head/analytics-code.html")
+  </head>
+
+  <body>
+    @@include("../../partials/navbar.html")
+    <main>
+      <!-- section -->
+      <section>
+        <!-- container -->
+        <div class="container">
+          <!-- row -->
+          <div class="row">
+            <!-- col -->
+            <div class="col-lg-3 col-md-4 col-12 border-end d-none d-md-block">
+              <div class="pt-10 pe-lg-10">
+                <!-- nav -->
+                <ul class="nav flex-column nav-pills nav-pills-dark">
+                  <!-- nav item -->
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      aria-current="page"
+                      href="@@webRoot/pages/account/orders.html"
+                    >
+                      <i class="feather-icon icon-shopping-bag me-2"></i>
+                      Siparişlerim
+                    </a>
+                  </li>
+
+                  <!-- nav item -->
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      href="@@webRoot/pages/account/settings.html"
+                    >
+                      <i class="feather-icon icon-settings me-2"></i>
+                      Ayarlar
+                    </a>
+                  </li>
+
+                  <!-- nav item -->
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      href="@@webRoot/pages/account/address.html"
+                    >
+                      <i class="feather-icon icon-map-pin me-2"></i>
+                      Adreslerim
+                    </a>
+                  </li>
+
+                  <!-- nav item -->
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active"
+                      href="@@webRoot/pages/account/notification.html"
+                    >
+                      <i class="feather-icon icon-bell me-2"></i>
+                      Bildirimler
+                    </a>
+                  </li>
+                  <!-- nav item -->
+                  <li class="nav-item">
+                    <hr />
+                  </li>
+                  <!-- nav item -->
+                  <li class="nav-item">
+                    <a class="nav-link" href="@@webRoot/index.html">
+                      <i class="feather-icon icon-log-out me-2"></i>
+                      Çıkış Yap
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-9 col-md-8 col-12">
+              <div class="py-6 p-md-6 p-lg-10">
+                <div class="mb-6">
+                  <!-- heading -->
+                  <h2 class="mb-0">Bildirim Ayarları</h2>
+                </div>
+
+                <div class="mb-10">
+                  <!-- text -->
+                  <div class="border-bottom pb-3 mb-5">
+                    <h5 class="mb-0">Email Bildirimleri</h5>
+                  </div>
+
+                  <!-- text -->
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-6"
+                  >
+                    <div>
+                      <h6 class="mb-1">Haftalık Bildirimler</h6>
+                      <p class="mb-0">
+                        Haftalık Bildirim Almak İstiyor musunuz?
+                      </p>
+                    </div>
+
+                    <!-- checkbox -->
+                    <div class="form-check form-switch">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="flexSwitchCheckDefault"
+                      />
+                      <label
+                        class="form-check-label"
+                        for="flexSwitchCheckDefault"
+                      ></label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mb-10">
+                  <!-- heading -->
+                  <div class="border-bottom pb-3 mb-5">
+                    <h5 class="mb-0">Sipariş Güncellemeleri</h5>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-6"
+                  >
+                    <div>
+                      <!-- heading -->
+                      <h6 class="mb-0">
+                        Sipariş oluşturulduktan hemen sonra, sipariş detayları
+                        mailinize gönderilsinzmi
+                      </h6>
+                    </div>
+                    <!-- form checkbox -->
+                    <div class="form-check form-switch">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        role="switch"
+                        id="flexSwitchCheckDefault2"
+                      />
+                      <label
+                        class="form-check-label"
+                        for="flexSwitchCheckDefault2"
+                      ></label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mb-6">
+                  <!-- text -->
+                  <div class="border-bottom pb-3 mb-5">
+                    <h5 class="mb-0">Altınışık Online Bildirimleri</h5>
+                  </div>
+                  <div>
+                    <!-- form checkbox -->
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckPosted"
+                      />
+                      <label class="form-check-label" for="flexCheckPosted"
+                        >İstek Listemdeki ürünler hakkında bilgi almak
+                        istiyorum</label
+                      >
+                    </div>
+
+                    <!-- form checkbox -->
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckCollection"
+                      />
+                      <label class="form-check-label" for="flexCheckCollection"
+                        >İndirimlerden veya Kampanyalardan haberdar olmak
+                        istiyorum.</label
+                      >
+                    </div>
+
+                    <!-- form checkbox -->
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckOrder"
+                      />
+                      <label class="form-check-label" for="flexCheckOrder"
+                        >Sipariş Süreci hakkında bilgilendirme mesajı almak
+                        istiyorum.</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- modal -->
+
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="offcanvasAccount"
+      aria-labelledby="offcanvasAccountLabel"
+    >
+      <!-- offcanvac header -->
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasAccountLabel">Offcanvas</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <!-- offcanvac body -->
+      <div class="offcanvas-body">
+        <ul class="nav flex-column nav-pills nav-pills-dark">
+          <!-- nav item -->
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="account-orders.html">
+              <i class="feather-icon icon-shopping-bag me-2"></i>
+              Your Orders
+            </a>
+          </li>
+          <!-- nav item -->
+          <li class="nav-item">
+            <a class="nav-link" href="account-settings.html">
+              <i class="feather-icon icon-settings me-2"></i>
+              Settings
+            </a>
+          </li>
+          <!-- nav item -->
+          <li class="nav-item">
+            <a class="nav-link" href="account-address.html">
+              <i class="feather-icon icon-map-pin me-2"></i>
+              Address
+            </a>
+          </li>
+          <!-- nav item -->
+          <li class="nav-item">
+            <a class="nav-link" href="account-payment-method.html">
+              <i class="feather-icon icon-credit-card me-2"></i>
+              Payment Method
+            </a>
+          </li>
+          <!-- nav item -->
+          <li class="nav-item">
+            <a class="nav-link active" href="account-notification.html">
+              <i class="feather-icon icon-bell me-2"></i>
+              Notification
+            </a>
+          </li>
+        </ul>
+        <hr class="my-6" />
+        <div>
+          <!-- nav -->
+          <ul class="nav flex-column nav-pills nav-pills-dark">
+            <!-- nav item -->
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">
+                <i class="feather-icon icon-log-out me-2"></i>
+                Log out
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    @@include("../../partials/footer.html")
+    <!-- Javascript-->
+    @@include("../../partials/scripts.html")
+  </body>
+</html>

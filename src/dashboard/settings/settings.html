@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include("../../partials/head/head-meta.html")
+    <title>Add Product Dashboard eCommerce HTML Template - FreshCart</title>
+    @@include("../../partials/head/head-links.html")
+    @@include("../../partials/head/analytics-code.html")
+    <link
+      rel="stylesheet"
+      href="@@webRoot/assets/scss/theme/vendor/tagsinput/bootstrap-taginput.css"
+    />
+  </head>
+
+  <body>
+    <!-- main wrapper -->
+
+    @@include("../../partials/top-navbar.html")
+    <div class="main-wrapper">
+      <!-- navbar vertical -->
+      @@include('../../partials/navbar-vertical.html', { "page_group":
+      "settings", "page": "settings" })
+
+      <!-- main -->
+      <main class="main-content-wrapper">
+        <!-- container -->
+        <div class="container">
+          <!-- row -->
+          <div class="row mb-8">
+            <div class="col-md-12">
+              <div class="d-md-flex justify-content-between align-items-center">
+                <!-- page header -->
+                <div>
+                  <h2>Ayarlar</h2>
+                  <!-- breacrumb -->
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                      <li class="breadcrumb-item">
+                        <a
+                          href="@@webRoot/dashboard/index.html"
+                          class="text-inherit"
+                          >Panel</a
+                        >
+                      </li>
+
+                      <li class="breadcrumb-item active" aria-current="page">
+                        Ayarlar
+                      </li>
+                    </ol>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- row -->
+          <div class="row">
+            <div class="col-md-3">
+              <div
+                class="nav flex-column nav-pills me-3 w-100 col-md-3"
+                id="v-pills-tab"
+                role="tablist"
+                aria-orientation="vertical"
+              >
+                <button
+                  class="nav-link active text-start"
+                  data-bs-toggle="pill"
+                  type="button"
+                  role="tab"
+                  aria-selected="true"
+                  data-bs-target="#v-general-tab"
+                  id="v-pills-general-settings-tab"
+                  aria-controls="v-pills-general-settings-tab"
+                >
+                  Genel Ayarlar
+                </button>
+
+                <button
+                  class="nav-link text-start"
+                  aria-selected="false"
+                  type="button"
+                  role="tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-billing-tab"
+                  id="v-pills-billing-settings-tab"
+                  aria-controls="v-pills-billing-settings-tab"
+                >
+                  Ödeme Ayarları
+                </button>
+
+                <button
+                  class="nav-link text-start"
+                  aria-selected="false"
+                  type="button"
+                  role="tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-cargo-tab"
+                  id="v-pills-cargo-settings-tab"
+                  aria-controls="v-pills-cargo-settings-tab"
+                >
+                  Kargo Ayarları
+                </button>
+
+                <button
+                  class="nav-link text-start"
+                  aria-selected="false"
+                  type="button"
+                  role="tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-meta-tab"
+                  id="v-pills-meta-settings-tab"
+                  aria-controls="v-pills-meta-settings-tab"
+                >
+                  Meta Ayarları
+                </button>
+
+                <button
+                  class="nav-link text-start"
+                  aria-selected="false"
+                  type="button"
+                  role="tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#v-store-policies-tab"
+                  id="v-pills-store-policies-tab"
+                  aria-controls="v-pills-store-policies-tab"
+                >
+                  Mağaza Politikaları
+                </button>
+              </div>
+            </div>
+
+            <div class="tab-content col-md-9" id="v-pills-tabContent">
+              <div
+                class="tab-pane fade show active"
+                role="tabpanel"
+                id="v-general-tab"
+                aria-labelledby="v-pills-general-settings-tab"
+              >
+                <div class="card shadow-lg p-5">
+                  <h4 class="title">GENEL AYARLAR</h4>
+                  <hr />
+
+                  <h4 class="mb-5 h5">Site Logosu</h4>
+                  <div class="mb-4 d-flex">
+                    <div class="position-relative">
+                      <img
+                        class="image icon-shape icon-xxxl bg-light rounded-4"
+                        src="../../assets/images/icons/bakery.svg"
+                        alt="Image"
+                      />
+
+                      <div
+                        class="file-upload position-absolute end-0 top-0 mt-n2 me-n1"
+                      >
+                        <input type="file" class="file-input" />
+                        <span
+                          class="icon-shape icon-sm rounded-circle bg-white"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="12"
+                            height="12"
+                            fill="currentColor"
+                            class="bi bi-pencil-fill text-muted"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"
+                            />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <h4 class="mb-5 h5">Site Başlık</h4>
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Başlık"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <h4 class="mb-5 h5">Site Slogan</h4>
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder="Slogan"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="col-lg-12 p-3 px-5 mt-3">
+                      <button class="btn btn-outline-dark w-100">Kaydet</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="tab-pane fade"
+                role="tabpanel"
+                id="v-billing-tab"
+                aria-labelledby="v-pills-billing-settings-tab"
+              >
+                Ödeme Ayaları
+              </div>
+
+              <div
+                class="tab-pane fade"
+                role="tabpanel"
+                id="v-cargo-tab"
+                aria-labelledby="v-pills-cargo-settings-tab"
+              >
+                Kargo Ayarları
+              </div>
+
+              <div
+                class="tab-pane fade"
+                role="tabpanel"
+                id="v-meta-tab"
+                aria-labelledby="v-pills-meta-settings-tab"
+              >
+                <div class="card shadow-lg p-5">
+                  <h4 class="title">META AYARLAR</h4>
+                  <hr />
+
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <h4 class="mb-5 h5">Site Başlık</h4>
+                        <input
+                                type="text"
+                                class="form-control"
+                                placeholder="Başlık"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <h4 class="mb-5 h5">Site Yazar</h4>
+                        <input
+                                type="text"
+                                class="form-control"
+                                placeholder="Yazar"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="col-md-6 mt-6">
+                      <div class="form-group">
+                        <h4 class="mb-5 h5">Site Açıklaması</h4>
+                        <textarea
+                          type="text"
+                          class="form-control"
+                          placeholder="Açıklama"
+                          style="height: 100px"
+                        ></textarea>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6 mt-6">
+                      <h4 class="mb-5 h5">Anahtar Kelimeler</h4>
+
+                      <div class="u-tagsinput mt-5">
+                        <input
+                          type="text"
+                          data-role="tagsinput"
+                          placeholder="Anahtar Kelimeler"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="col-lg-12 mt-5">
+                      <button class="btn btn-outline-dark w-100">Kaydet</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="tab-pane fade"
+                role="tabpanel"
+                id="v-store-policies-tab"
+                aria-labelledby="v-pills-store-policies-tab"
+              >
+                <div class="card shadow-lg p-5">
+                  <h4 class="title">MAĞAZA POLİTİKALARI</h4>
+                  <hr />
+
+                  <div class="row">
+                    <!-- input -->
+                    <div class="mb-3 col-lg-12 mt-5">
+                      <h4 class="mb-3 h5">Gizlilik Politikası</h4>
+                      <div id="editor" style="min-height: 200px"></div>
+                    </div>
+
+                    <!-- input -->
+                    <div class="mb-3 col-lg-12 mt-5">
+                      <h4 class="mb-3 h5">Satış Sözleşmesi Politikası</h4>
+                      <div id="editor-2" style="min-height: 200px"></div>
+                    </div>
+
+                    <div class="col-lg-12">
+                      <button class="btn btn-outline-dark w-100">Kaydet</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    @@include("../../partials/scripts.html")
+    <script src="@@webRoot/node_modules/quill/dist/quill.min.js"></script>
+    <script src="@@webRoot/assets/js/vendors/editor.js"></script>
+    <script src="@@webRoot/node_modules/dropzone/dist/min/dropzone.min.js"></script>
+    <script src="@@webRoot/assets/js/vendors/dropzone.js"></script>
+    <script src="@@webRoot/assets/js/vendors/jquery.js"></script>
+    <script src="@@webRoot/assets/js/vendors/bootstrap-taginput.js"></script>
+  </body>
+</html>

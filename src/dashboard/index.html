@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include("../partials/head/head-meta.html")
+    <title>Dashboard eCommerce HTML Template - FreshCart</title>
+    @@include("../partials/head/head-links.html")
+    @@include("../partials/head/analytics-code.html")
+  </head>
+
+  <body>
+    <!-- main -->
+    <div>
+      @@include("../partials/top-navbar.html")
+
+      <div class="main-wrapper">
+        <!-- navbar vertical -->
+        @@include('../partials/navbar-vertical.html', { "page": "dashboard" })
+
+        <!-- main wrapper -->
+        <main class="main-content-wrapper">
+          <section class="container">
+            <!-- row -->
+            <div class="row mb-8">
+              <div class="col-md-12">
+                <!-- card -->
+                <div
+                  class="card bg-light border-0 rounded-4"
+                  style="
+                    background-image: url(../assets/images/slider/slider-image-1.jpg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: right;
+                  "
+                >
+                  <div class="card-body p-lg-12">
+                    <h1>ALTINIŞIK ONLINE</h1>
+                    <p>
+                      Giriş Yaptınız: <b>MURAT ALTINIŞIK</b>
+                    </p>
+                    <a href="@@webRoot/dashboard/products/add.html" class="btn btn-primary">Ürün Ekle</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- table -->
+            <div class="table-responsive-xl mb-6 mb-lg-0">
+              <div class="row flex-nowrap pb-3 pb-lg-0">
+                <div class="col-lg-4 col-12 mb-6">
+                  <!-- card -->
+                  <div class="card h-100 card-lg">
+                    <!-- card body -->
+                    <div class="card-body p-6">
+                      <!-- heading -->
+                      <div
+                        class="d-flex justify-content-between align-items-center mb-6"
+                      >
+                        <div>
+                          <h4 class="mb-0 fs-5">Kazanç</h4>
+                        </div>
+                        <div
+                          class="icon-shape icon-md bg-light-danger text-dark-danger rounded-circle"
+                        >
+                          <i class="bi bi-currency-dollar fs-5"></i>
+                        </div>
+                      </div>
+                      <!-- project number -->
+                      <div class="lh-1">
+                        <h1 class="mb-2 fw-bold fs-2">93.438,78 TL</h1>
+                        <span>Aylık Gelir</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-12 mb-6">
+                  <!-- card -->
+                  <div class="card h-100 card-lg">
+                    <!-- card body -->
+                    <div class="card-body p-6">
+                      <!-- heading -->
+                      <div
+                        class="d-flex justify-content-between align-items-center mb-6"
+                      >
+                        <div>
+                          <h4 class="mb-0 fs-5">Siparişler</h4>
+                        </div>
+                        <div
+                          class="icon-shape icon-md bg-light-warning text-dark-warning rounded-circle"
+                        >
+                          <i class="bi bi-cart fs-5"></i>
+                        </div>
+                      </div>
+                      <!-- project number -->
+                      <div class="lh-1">
+                        <h1 class="mb-2 fw-bold fs-2">42,339</h1>
+                        <span>
+                          <span class="text-dark me-1">35+</span>
+                          Yeni Satış
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-12 mb-6">
+                  <!-- card -->
+                  <div class="card h-100 card-lg">
+                    <!-- card body -->
+                    <div class="card-body p-6">
+                      <!-- heading -->
+                      <div
+                        class="d-flex justify-content-between align-items-center mb-6"
+                      >
+                        <div>
+                          <h4 class="mb-0 fs-5">Müşteriler</h4>
+                        </div>
+                        <div
+                          class="icon-shape icon-md bg-light-info text-dark-info rounded-circle"
+                        >
+                          <i class="bi bi-people fs-5"></i>
+                        </div>
+                      </div>
+                      <!-- project number -->
+                      <div class="lh-1">
+                        <h1 class="mb-2 fw-bold fs-2">39,354</h1>
+                        <span>
+                          <span class="text-dark me-1">30+</span>
+                          yeni müşteri
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- row -->
+            <div class="row">
+              <div class="col-xl-8 col-lg-6 col-md-12 col-12 mb-6">
+                <!-- card -->
+                <div class="card h-100 card-lg">
+                  <div class="card-body p-6">
+                    <!-- heading -->
+                    <div class="d-flex justify-content-between">
+                      <div>
+                        <h3 class="mb-1 fs-5">Hasılat</h3>
+                        <small> geçen yıla göre (+63%)</small>
+                      </div>
+                      <div>
+                        <!-- select option -->
+                        <select class="form-select">
+                          <option selected>2019</option>
+                          <option value="2023">2020</option>
+                          <option value="2024">2021</option>
+                          <option value="2025">2022</option>
+                          <option value="2025">2023</option>
+                        </select>
+                      </div>
+                    </div>
+                    <!-- chart -->
+                    <div id="revenueChart" class="mt-6"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xl-4 col-lg-6 col-12 mb-6">
+                <!-- card -->
+                <div class="card h-100 card-lg">
+                  <!-- card body -->
+                  <div class="card-body p-6">
+                    <!-- heading -->
+                    <h3 class="mb-0 fs-5">Toplam Satış</h3>
+                    <div
+                      id="totalSale"
+                      class="mt-6 d-flex justify-content-center"
+                    ></div>
+                    <div class="mt-4">
+                      <!-- list -->
+                      <ul class="list-unstyled mb-0">
+                        <li class="mb-2">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="8"
+                            height="8"
+                            fill="currentColor"
+                            class="bi bi-circle-fill text-primary"
+                            viewBox="0 0 16 16"
+                          >
+                            <circle cx="8" cy="8" r="8" />
+                          </svg>
+                          <span class="ms-1">
+                            <span class="text-dark">Kargolama <b>32.98</b> TL </span>
+                            (2%)
+                          </span>
+                        </li>
+                        <li class="mb-2">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="8"
+                            height="8"
+                            fill="currentColor"
+                            class="bi bi-circle-fill text-warning"
+                            viewBox="0 0 16 16"
+                          >
+                            <circle cx="8" cy="8" r="8" />
+                          </svg>
+                          <span class="ms-1">
+                            <span class="text-dark">Geri Ödemeler: <b>11</b></span>
+                            (11%)
+                          </span>
+                        </li>
+                        <li class="mb-2">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="8"
+                            height="8"
+                            fill="currentColor"
+                            class="bi bi-circle-fill text-danger"
+                            viewBox="0 0 16 16"
+                          >
+                            <circle cx="8" cy="8" r="8" />
+                          </svg>
+                          <span class="ms-1">
+                            <span class="text-dark">Sipariş: <b>14.87</b> TL</span>
+                            (1%)
+                          </span>
+                        </li>
+                        <li>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="8"
+                            height="8"
+                            fill="currentColor"
+                            class="bi bi-circle-fill text-info"
+                            viewBox="0 0 16 16"
+                          >
+                            <circle cx="8" cy="8" r="8" />
+                          </svg>
+                          <span class="ms-1">
+                            <span class="text-dark">Gelir: <b>3,271</b></span>
+                            (86%)
+                          </span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- row -->
+            <div class="row">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-12 mb-6">
+                <!-- card -->
+                <div class="card h-100 card-lg">
+                  <!-- card body -->
+                  <div class="card-body p-6">
+                    <h3 class="mb-0 fs-5">Satışlara Genel Bakış</h3>
+                    <div class="mt-6">
+                      <!-- text -->
+                      <div class="mb-5">
+                        <div
+                          class="d-flex align-items-center justify-content-between"
+                        >
+                          <h5 class="fs-6">Toplam Kar</h5>
+                          <span>
+                            <span class="me-1 text-dark">1,619 TL</span>
+                            (8.6%)
+                          </span>
+                        </div>
+                        <!-- main wrapper -->
+                        <div>
+                          <!-- progressbar -->
+                          <div
+                            class="progress bg-light-primary"
+                            style="height: 6px"
+                          >
+                            <div
+                              class="progress-bar bg-primary"
+                              role="progressbar"
+                              aria-label="Example 1px high"
+                              style="width: 25%"
+                              aria-valuenow="25"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="mb-5">
+                        <!-- text -->
+                        <div
+                          class="d-flex align-items-center justify-content-between"
+                        >
+                          <h5 class="fs-6">Toplam Gelir</h5>
+                          <span>
+                            <span class="me-1 text-dark">3,571 TL</span>
+                            (86.4%)
+                          </span>
+                        </div>
+                        <div>
+                          <!-- progressbar -->
+                          <div
+                            class="progress bg-info-soft"
+                            style="height: 6px"
+                          >
+                            <div
+                              class="progress-bar bg-info"
+                              role="progressbar"
+                              aria-label="Example 1px high"
+                              style="width: 88%"
+                              aria-valuenow="88"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div>
+                        <!-- text -->
+                        <div
+                          class="d-flex align-items-center justify-content-between"
+                        >
+                          <h5 class="fs-6">Toplam Gider</h5>
+                          <span>
+                            <span class="me-1 text-dark">3,430 TL</span>
+                            (74.5%)
+                          </span>
+                        </div>
+                        <div>
+                          <!-- progressbar -->
+                          <div
+                            class="progress bg-light-danger"
+                            style="height: 6px"
+                          >
+                            <div
+                              class="progress-bar bg-danger"
+                              role="progressbar"
+                              aria-label="Example 1px high"
+                              style="width: 45%"
+                              aria-valuenow="45"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- row -->
+            <div class="row">
+              <div class="col-xl-12 col-lg-12 col-md-12 col-12 mb-6">
+                <div class="card h-100 card-lg">
+                  <!-- heading -->
+                  <div class="p-6">
+                    <h3 class="mb-0 fs-5">Son Siparişler</h3>
+                  </div>
+                  <div class="card-body p-0">
+                    <!-- table -->
+                    <div class="table-responsive">
+                      <table
+                        class="table table-centered table-borderless text-nowrap table-hover"
+                      >
+                        <thead class="bg-light">
+                          <tr>
+                            <th scope="col">Sipariş Numarası</th>
+                            <th scope="col">Ürün</th>
+                            <th scope="col">Sipariş Tarihi</th>
+                            <th scope="col">Fiyat</th>
+                            <th scope="col">Durum</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td><a href="">#FC0005</a></td>
+                            <td>Haldiram's Sev Bhujia</td>
+                            <td>28 March 2023</td>
+                            <td>18.00 TL</td>
+                            <td>
+                              <span
+                                class="badge bg-light-primary text-dark-primary"
+                                >Shipped</span
+                              >
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><a href="">#FC0005</a></td>
+                            <td>Haldiram's Sev Bhujia</td>
+                            <td>28 March 2023</td>
+                            <td>18.00 TL</td>
+                            <td>
+                              <span
+                                      class="badge bg-light-primary text-dark-primary"
+                              >Shipped</span
+                              >
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><a href="">#FC0005</a></td>
+                            <td>Haldiram's Sev Bhujia</td>
+                            <td>28 March 2023</td>
+                            <td>18.00 TL</td>
+                            <td>
+                              <span
+                                      class="badge bg-light-primary text-dark-primary"
+                              >Shipped</span
+                              >
+                            </td>
+                          </tr>
+                          <tr>
+                            <td><a href="">#FC0005</a></td>
+                            <td>Haldiram's Sev Bhujia</td>
+                            <td>28 March 2023</td>
+                            <td>18.00 TL</td>
+                            <td>
+                              <span
+                                      class="badge bg-light-primary text-dark-primary"
+                              >Shipped</span
+                              >
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    @@include("../partials/scripts.html")
+    <script src="@@webRoot/node_modules/apexcharts/dist/apexcharts.min.js"></script>
+    <script src="@@webRoot/assets/js/vendors/chart.js"></script>
+  </body>
+</html>

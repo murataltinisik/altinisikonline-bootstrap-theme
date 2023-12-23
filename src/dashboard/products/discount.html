@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include("../../partials/head/head-meta.html")
+    <title>Add Product Dashboard eCommerce HTML Template - FreshCart</title>
+    <link
+      href="@@webRoot/node_modules/dropzone/dist/min/dropzone.min.css"
+      rel="stylesheet"
+    />
+    @@include("../../partials/head/head-links.html")
+    @@include("../../partials/head/analytics-code.html")
+  </head>
+
+  <body>
+    <!-- main wrapper -->
+
+    @@include("../../partials/top-navbar.html")
+    <div class="main-wrapper">
+      <!-- navbar vertical -->
+      @@include('../../partials/navbar-vertical.html', { "page_group":
+      "products", "page": "discount" })
+
+      <!-- main -->
+      <main class="main-content-wrapper">
+        <!-- container -->
+        <div class="container">
+          <!-- row -->
+          <div class="row mb-8">
+            <div class="col-md-12">
+              <div class="d-md-flex justify-content-between align-items-center">
+                <!-- page header -->
+                <div>
+                  <h2>İndirimler</h2>
+                  <!-- breacrumb -->
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                      <li class="breadcrumb-item">
+                        <a
+                          href="@@webRoot/dashboard/index.html"
+                          class="text-inherit"
+                          >Panel</a
+                        >
+                      </li>
+                      <li class="breadcrumb-item">
+                        <a
+                          href="@@webRoot/dashboard/products/products.html"
+                          class="text-inherit"
+                          >Ürünler</a
+                        >
+                      </li>
+                      <li class="breadcrumb-item active" aria-current="page">
+                        İndirimler
+                      </li>
+                    </ol>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- row -->
+          <div class="row">
+            <div class="col-md-8">
+              <div class="col-lg-12 col-12">
+                <!-- card -->
+                <div class="card mb-6 card-lg">
+                  <!-- card body -->
+                  <div class="card-body p-6">
+                    <h4 class="mb-4 h5">Ürün Bilgileri</h4>
+
+                    <div class="row">
+                      <!-- input -->
+                      <div class="mb-3 col-lg-12">
+                        <label class="form-label">Ürün Seç</label>
+
+                        <div class="row-fluid">
+                          <select class="form-control w-100">
+                            <option value="">Seçiniz</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <!-- input -->
+                      <div class="mb-3 col-lg-6">
+                        <label class="form-label">Ürün Adı</label>
+
+                        <div class="form-group">
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="ÜRÜN ADI"
+                            disabled
+                          />
+                        </div>
+                      </div>
+
+                      <!-- input -->
+                      <div class="mb-3 col-lg-6">
+                        <label class="form-label">Ürün Markası</label>
+
+                        <div class="form-group">
+                          <input
+                            type="date"
+                            class="form-control"
+                            placeholder="Ürün Markası"
+                            disabled
+                          />
+                        </div>
+                      </div>
+
+                      <!-- input -->
+                      <div class="mb-3 col-lg-4">
+                        <label class="form-label">Ürün Fiyatı</label>
+
+                        <div class="form-group">
+                          <input
+                            type="number"
+                            class="form-control"
+                            placeholder="ÜRÜN FİYAT"
+                            disabled
+                          />
+                        </div>
+                      </div>
+
+                      <!-- input -->
+                      <div class="mb-3 col-lg-4">
+                        <label class="form-label">Ürün Miktar</label>
+
+                        <div class="form-group">
+                          <input
+                            type="number"
+                            class="form-control"
+                            placeholder="Ürün Miktar"
+                            disabled
+                          />
+                        </div>
+                      </div>
+
+                      <!-- input -->
+                      <div class="mb-3 col-lg-4">
+                        <label class="form-label">Ürün Satış Adedi</label>
+
+                        <div class="form-group">
+                          <input
+                            type="number"
+                            class="form-control"
+                            placeholder="Ürün Satış Adedi"
+                            disabled
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- card -->
+                <div class="card mb-6 card-lg">
+                  <!-- card body -->
+                  <div class="card-body p-6">
+                    <h4 class="mb-4 h5">İndirim Bilgileri</h4>
+
+                    <div class="row">
+                      <!-- input -->
+                      <div class="mb-3 col-lg-12">
+                        <label class="form-label">İndirim Türü</label>
+
+                        <div class="form-group">
+                          <select class="form-control w-100">
+                            <option value="">Seçiniz</option>
+                            <option value="1">Fiyat Üzerinden</option>
+                            <option value="2">Miktar Üzerinden</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="mb-3 col-lg-6">
+                        <label class="form-label">İndirim Oranı</label>
+
+                        <div class="form-group">
+                          <input
+                            type="number"
+                            placeholder="İndirim Oranı"
+                            class="form-control"
+                          />
+                        </div>
+                      </div>
+
+                      <div class="mb-3 col-lg-6">
+                        <label class="form-label">Toplam İndirim Tutarı</label>
+
+                        <div class="form-group">
+                          <input
+                            type="number"
+                            placeholder="Toplam İndirim Tutarı"
+                            class="form-control text-success"
+                            disabled
+                          />
+                        </div>
+                      </div>
+
+                      <div class="mb-3 col-lg-6">
+                        <label class="form-label">İndirimsiz Fiyat</label>
+
+                        <div class="form-group">
+                          <input
+                            type="number"
+                            placeholder="İndirimsiz Fiyat"
+                            class="form-control text-success"
+                            disabled
+                          />
+                        </div>
+                      </div>
+
+                      <div class="mb-3 col-lg-6">
+                        <label class="form-label">İndirimli Fiyat</label>
+
+                        <div class="form-group">
+                          <input
+                            type="number"
+                            placeholder="İndirimli Fiyat"
+                            class="form-control text-success"
+                            disabled
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-12">
+              <!-- card -->
+              <div class="card mb-6 card-lg">
+                <!-- card body -->
+                <div class="card-body p-6">
+                  <!-- input -->
+                  <div>
+                    <div class="mb-3">
+                      <label class="form-label">Ürün Kod</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Ürün Kod"
+                      />
+                    </div>
+
+                    <!-- input -->
+                    <div class="mb-3">
+                      <label class="form-label">Ürün Barkod</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Enter Product Title"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- card -->
+              <div class="card mb-6 card-lg">
+                <h5 class="p-5 pb-0">İndirim Tarih Aralığı</h5>
+
+                <!-- card body -->
+                <div class="card-body p-6 pt-3">
+                  <!-- input -->
+                  <div>
+                    <div class="mb-3">
+                      <label class="form-label">İndirim Başlangıç Tarihi</label>
+                      <input
+                        type="date"
+                        class="form-control"
+                        placeholder="Ürün Kod"
+                      />
+                    </div>
+
+                    <!-- input -->
+                    <div class="mb-3">
+                      <label class="form-label">İndirim Bitiş Tarihi</label>
+                      <input
+                        type="date"
+                        class="form-control"
+                        placeholder="Enter Product Title"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- button -->
+              <div class="d-grid">
+                <a href="#" class="btn btn-primary">İndirim'i Uygula</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    @@include("../../partials/scripts.html")
+    <script src="@@webRoot/node_modules/quill/dist/quill.min.js"></script>
+    <script src="@@webRoot/assets/js/vendors/editor.js"></script>
+    <script src="@@webRoot/node_modules/dropzone/dist/min/dropzone.min.js"></script>
+    <script src="@@webRoot/assets/js/vendors/dropzone.js"></script>
+    <script src="@@webRoot/assets/js/vendors/jquery.js"></script>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include("../../partials/head/head-meta.html")
+    <title>Customers Dashboard eCommerce HTML Template - FreshCart</title>
+    @@include("../../partials/head/head-links.html")
+    @@include("../../partials/head/analytics-code.html")
+  </head>
+
+  <body>
+    @@include("../../partials/top-navbar.html")
+    <div class="main-wrapper">
+      <!-- navbar vertical -->
+      @@include('../../partials/navbar-vertical.html', { "page_group": "staff",
+      "page": "staff-powers" })
+
+      <main class="main-content-wrapper">
+        <div class="container">
+          <div class="row mb-8">
+            <div class="col-md-12">
+              <div
+                class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-4"
+              >
+                <div>
+                  <h2>Personel Yetkileri</h2>
+                  <!-- breacrumb -->
+                  <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                      <li class="breadcrumb-item">
+                        <a
+                          href="@@webRoot/dashboard/index.html"
+                          class="text-inherit"
+                          >Panel</a
+                        >
+                      </li>
+                      <li class="breadcrumb-item active" aria-current="page">
+                        Personel Yetkileri
+                      </li>
+                    </ol>
+                  </nav>
+                </div>
+                <div>
+                  <a href="#!" class="btn btn-primary">Add New Customer</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-12 col-12">
+              <!-- card -->
+              <div class="card mb-6 shadow border-0">
+                <!-- card body -->
+                <div class="card-body p-6">
+                  <h4 class="mb-4 h5 mt-5">Yetki Detayları</h4>
+
+                  <div class="row">
+                    <!-- input -->
+                    <div class="mb-3 col-lg-6">
+                      <label class="form-label">Yetki Adı</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Yetki Ad"
+                        required
+                      />
+                    </div>
+
+                    <!-- input -->
+                    <div class="mb-3 col-lg-6">
+                      <label class="form-label">Yetki Kodu</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Yetki Kodu"
+                        required
+                      />
+                      <span class="text-secondary px-1">X,Y,15,-,*</span>
+                    </div>
+
+                    <div class="col-lg-12">
+                      <a href="#" class="btn btn-primary">Yetki Ekle</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    @@include("../../partials/scripts.html")
+  </body>
+</html>
